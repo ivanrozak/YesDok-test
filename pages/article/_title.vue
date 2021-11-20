@@ -23,6 +23,26 @@ export default {
       article: {},
     };
   },
+  head() {
+    return {
+      title: this.article?.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article?.description,
+        },
+        {
+          name: 'author',
+          content: this.article?.author,
+        },
+        {
+          name: 'keywords',
+          content: 'HTML, CSS, JavaScript',
+        },
+      ],
+    };
+  },
   created() {
     this.data.map((item) => {
       if (item.title == this.$route.params.title) {
