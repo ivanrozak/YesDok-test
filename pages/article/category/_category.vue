@@ -7,7 +7,7 @@
           Artikel {{ this.$route.params.category }}
         </div>
       </header>
-      <div class="flex md:flex-wrap-reverse flex-wrap">
+      <div v-if="articles[0]" class="flex md:flex-wrap-reverse flex-wrap">
         <div
           class="w-full sm:w-4/6 md:pr-4 mb-3"
           v-for="item in articles"
@@ -60,6 +60,10 @@
         <div class="w-full sm:w-2/6">
           <SideBar />
         </div>
+      </div>
+
+      <div v-else class="text-blue text-2xl text-center py-20">
+        Belum ada artikel
       </div>
     </div>
   </div>
