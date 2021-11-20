@@ -57,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full sm:w-2/6 mb-3">
+        <div class="w-full sm:w-2/6">
           <SideBar />
         </div>
       </div>
@@ -68,39 +68,26 @@
 </template>
 
 <script>
-import json from '../data/dummy.json';
-import { mapMutations } from 'vuex';
-
+import json from '../../../data/dummy.json';
 export default {
   data() {
     return {
-      articles: json.articles,
-    };
-  },
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'My custom description',
-        },
-      ],
+      data: json.articles,
+      articles: [],
     };
   },
   created() {
-    // this.json.books.map((item) => {
-    //   if (item.id == 1) {
-    //     console.log(item);
-    //   }
-    // });
+    let dataArticles = [];
+    this.data.map((item) => {
+      if (item.category == this.$route.params.category) {
+        dataArticles.push(item);
+      }
+    });
+    this.articles = dataArticles;
   },
   methods: {
-    ...mapMutations(['increment']),
-    addData() {
-      this.increment();
+    toDetailArticle(value) {
+      this.$router.push(`/article/${value}`);
     },
   },
 };

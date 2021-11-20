@@ -4,9 +4,7 @@
     <div class="card grid grid-cols-1 gap-4">
       <!--avatar-->
       <div class="formAvatar justify-self-center">
-        <img
-          src="https://avatars1.githubusercontent.com/u/72216013?s=460&u=9af74959fafce6a2e3e799be7024060f0c74a63c&v=4"
-        />
+        <img src="/yesdok.png" />
       </div>
       <!--fields-->
       <label class="block">
@@ -39,35 +37,35 @@ export default {};
   @apply border rounded-lg p-10 m-10 bg-white shadow-sm w-full max-w-sm;
 }
 
-[type="text"],
-[type="password"],
-[type="email"],
-[type="number"],
-[type="url"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="time"],
-[type="search"],
-[type="tel"],
-[type="checkbox"],
-[type="radio"],
+[type='text'],
+[type='password'],
+[type='email'],
+[type='number'],
+[type='url'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='time'],
+[type='search'],
+[type='tel'],
+[type='checkbox'],
+[type='radio'],
 [multiple],
 textarea,
 select {
   @apply rounded-md border-gray-100 border shadow-sm bg-gray-100 focus:border-emerald-300 focus:ring focus:ring-emerald-200 focus:ring-opacity-50;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   @apply text-emerald-400 bg-current;
 }
 
 .formAvatar {
   @apply text-gray-300;
   img {
-    @apply rounded-full border w-32 h-32;
+    @apply h-20 mb-2;
   }
 }
 
