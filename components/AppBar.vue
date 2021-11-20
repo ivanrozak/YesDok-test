@@ -68,15 +68,27 @@
 
     <div :class="[isOpen ? '' : 'hidden', 'md:hidden']">
       <div class="px-2 pt-2 pb-3 sm:px-3">
-        <NuxtLink to="/" class="link-sm">Beranda</NuxtLink>
-        <NuxtLink to="/store" class="link-sm">Store</NuxtLink>
-        <NuxtLink to="#" class="link-sm">Karir</NuxtLink>
-        <NuxtLink to="/contact-us" class="link-sm">Tentang Kami</NuxtLink>
-        <NuxtLink to="/" class="link-sm">Hubungi Kami</NuxtLink>
+        <NuxtLink to="/" class="link-sm" @click.prevent="toogle()"
+          >Beranda</NuxtLink
+        >
+        <NuxtLink to="/store" class="link-sm" @click.prevent="toogle()"
+          >Store</NuxtLink
+        >
+        <NuxtLink to="#" class="link-sm" @click.prevent="toogle()"
+          >Karir</NuxtLink
+        >
+        <NuxtLink to="/about-us" class="link-sm" @click.prevent="toogle()"
+          >Tentang Kami</NuxtLink
+        >
+        <NuxtLink to="/contact-us" class="link-sm" @click.prevent="toogle()"
+          >Hubungi Kami</NuxtLink
+        >
       </div>
       <div class="pt-4 pb-3 border-t border-gray-700">
         <div class="my-3 text-center">
-          <NuxtLink to="/auth/login" class="btn">Login/Register</NuxtLink>
+          <NuxtLink to="/auth/login" class="btn" @click.prevent="toogle()"
+            >Login/Register</NuxtLink
+          >
         </div>
       </div>
     </div>
