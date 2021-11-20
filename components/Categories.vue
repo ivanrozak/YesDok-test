@@ -3,7 +3,7 @@
     <div
       class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-center"
     >
-      <ul class="flex justify-center">
+      <ul class="flex justify-center flex-wrap">
         <li v-for="item in categories" :key="item">
           <NuxtLink :to="{ path: `/article/category/${item}` }" class="link">{{
             capitalizeLetter(item)
