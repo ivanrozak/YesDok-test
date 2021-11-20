@@ -102,6 +102,9 @@ export default {
     addData() {
       this.increment();
     },
+    toDetailArticle(value) {
+      this.$router.push(`/article/${value}`);
+    },
   },
 };
 </script>
