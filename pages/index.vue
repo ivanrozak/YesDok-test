@@ -61,20 +61,17 @@
           <SideBar />
         </div>
       </div>
-
-      <!-- <h1>Page {{ this.$route.params.category }}</h1> -->
     </div>
   </div>
 </template>
 
 <script>
-import json from '../data/dummy.json';
 import { mapMutations } from 'vuex';
 
 export default {
   data() {
     return {
-      articles: json.articles,
+      articles: this.$store.state.articles,
     };
   },
   head() {
@@ -89,13 +86,6 @@ export default {
         },
       ],
     };
-  },
-  created() {
-    // this.json.books.map((item) => {
-    //   if (item.id == 1) {
-    //     console.log(item);
-    //   }
-    // });
   },
   methods: {
     ...mapMutations(['increment']),

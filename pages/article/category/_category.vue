@@ -61,18 +61,15 @@
           <SideBar />
         </div>
       </div>
-
-      <!-- <h1>Page {{ this.$route.params.category }}</h1> -->
     </div>
   </div>
 </template>
 
 <script>
-import json from '../../../data/dummy.json';
 export default {
   data() {
     return {
-      data: json.articles,
+      data: this.$store.state.articles,
       articles: [],
     };
   },

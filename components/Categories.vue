@@ -15,25 +15,11 @@
 </template>
 
 <script>
-import json from '../data/dummy.json';
 export default {
   data() {
     return {
-      categories: json.categories,
-      articles: json.articles,
-      article: [],
+      categories: this.$store.state.categories,
     };
-  },
-  created() {
-    // console.log(this.articles);
-    let dataArticles = [];
-    this.articles.map((item) => {
-      if (item.category == this.$route.params.category) {
-        // console.log(item);
-        dataArticles.push(item);
-      }
-    });
-    // console.log(dataArticles);
   },
   methods: {
     capitalizeLetter(string) {

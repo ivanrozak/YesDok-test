@@ -16,11 +16,10 @@
 </template>
 
 <script>
-import json from '../../data/dummy.json';
 export default {
   data() {
     return {
-      data: json.articles,
+      data: this.$store.state.articles,
       article: {},
     };
   },
