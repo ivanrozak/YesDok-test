@@ -54,12 +54,12 @@ export default {};
 [multiple],
 textarea,
 select {
-  @apply rounded-md border-gray-100 border shadow-sm bg-gray-100 focus:border-emerald-300 focus:ring focus:ring-emerald-200 focus:ring-opacity-50;
+  @apply rounded-md border-gray-100 border shadow-sm bg-gray-100 focus:border-blue-light focus:ring focus:ring-blue-200 focus:ring-opacity-50;
 }
 
 [type='checkbox'],
 [type='radio'] {
-  @apply text-emerald-400 bg-current;
+  @apply text-blue bg-blue-light;
 }
 
 .formAvatar {
@@ -70,6 +70,6 @@ select {
 }
 
 .btn {
-  @apply rounded border px-6 py-2 bg-emerald-400 text-gray-100 shadow-sm;
+  @apply rounded border px-6 py-2 bg-blue text-gray-100 shadow-sm;
 }
 </style>
